@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    user-{{ context.name | lower}}
+{% endblock title%}
+<!--
+::FILTERS
+safe
+capitalize
+lower
+upper
+title
+trim
+striptags
+-->
+
+{% block content %}
+    <div class="text-center">
+        <h1 class="mt-5">Hello, <strong>{{ context.name | capitalize }}</strong></h1>
+        <p><b>{{ context.name | upper }}</b>, {{ context.strg }}</p>
+    </div>
+{% endblock content %}
+
